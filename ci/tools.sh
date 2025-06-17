@@ -30,7 +30,7 @@ if retry rustup component add rustfmt ; then
 fi
 
 if retry rustup component add clippy ; then
-    cargo clippy --all --tests --features serde,rayon -- -D clippy::all
+    cargo clippy --all --tests --features allocator-api2,serde,rayon -- -D clippy::all
 fi
 
 if command -v shellcheck ; then
